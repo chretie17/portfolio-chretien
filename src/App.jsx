@@ -171,7 +171,7 @@ const Portfolio = () => {
               { title: 'Network Infrastructure', icon: '🌐' },
               { title: 'System Administration', icon: '⚙️' },
               { title: 'Adobe Creative Suite', icon: '🎨' },
-              { title: 'Digital and Social Media Communication or management', icon: '📱' }
+              { title: 'Digital', icon: '📱' }
             ].map((skill, index) => (
               <div key={index} className="p-6 bg-blue-50 rounded-xl hover:shadow-lg transition-shadow">
                 <div className="text-4xl mb-4">{skill.icon}</div>

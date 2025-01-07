@@ -1,12 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Ensures assets are served relative to the site root
+  base: './', // Relative paths for production builds
+  server: {
+    watch: {
+      usePolling: true, // Fixes file watcher issues
+    },
+  },
   build: {
-    outDir: 'dist', // Specifies the build output directory
-    assetsDir: 'assets', // Stores assets in an 'assets' folder
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
 });
